@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	 .calculos{
+	 	background: #c7502c;
+	 	color: #f0e8e6;
+	 	margin: 5px;
+	 	padding: 10px;
+	 	font-size: 30px;
+	 }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>VECTOR CON 20 ELEMENTOS ALEATORIOS ENTRE -10 Y 10</h1>
+	</header>
+	<article>
+			<div class="calculos" id="salida">	
+					
+			</div>
+
+<script type="text/javascript">
+	var array=[];
+	var num=[];
+	n=parseInt(prompt("numero de elementos del nuevo vector"))
+	vMin=parseInt(prompt("valor minimo de los elementos del nuevo vector"));
+	vMax=parseInt(prompt("valor maximo de los elemntos del nuevo  vector"));
+	var s=0;
+	var c=0;
+	for (var i=1;i<=n;i++)
+	{
+		array.push(ObtAleatorioEntero(vMin,vMax))
+	}
+	
+		for(j=1;j<=n;j++){
+		if(array[j]>0){
+			s=s+array[j];
+			c=c+1;
+		}
+	}
+
+		document.getElementById("salida").innerHTML ="En el vector es: " + array+" la suma es "+s;
+	 function ObtAleatorioEntero(min,max){
+	 	return Math.floor(Math.random()*(max - min))+min;
+	 }
+</script>
+</body>
+</html>
